@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Terms of Service – Unblocked Web Games</title>
+    <meta name="description" content="Read the Terms of Service for Unblocked Web Games. By accessing or using our site, you agree to these terms.">
+    <link rel="canonical" href="https://unblockedwebgames.github.io/terms">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Terms of Service",
+      "url": "https://unblockedwebgames.github.io/terms",
+      "description": "Official Terms of Service for Unblocked Web Games website.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Unblocked Web Games",
+        "url": "https://unblockedwebgames.github.io/"
+      }
+    }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff2a6d;
+            --secondary: #05d9e8;
+            --dark: #0d0221;
+            --darker: #070115;
+            --light: #f0f0f0;
+            --gray: #2a2a3c;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header & Footer (identical to your original) */
+        header {
+            background: rgba(13, 2, 33, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff0055;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(5, 217, 232, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Content Styles */
+        .content-section {
+            padding: 120px 0 60px;
+        }
+
+        .content-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        .content-block {
+            background: rgba(42, 42, 60, 0.4);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+        }
+
+        .content-block h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .content-block p, .content-block ul {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .content-block ul {
+            padding-left: 20px;
+        }
+
+        .content-block li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-title {
+                font-size: 28px;
+            }
+            .content-block {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .auth-buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (identical to your original) -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>Unblocked Games</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/bitlife">Bitlife</a></li>
+                    <li><a href="/tunnelrush">Tunnel Rush</a></li>
+                    <li><a href="/eggy-car">Eggy Car</a></li>
+                    <li><a href="/1v1-lol">1v1 lol</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+
+    <!-- Terms Content -->
+    <section class="content-section">
+        <div class="container">
+            <h1 class="content-title">Terms of Service</h1>
+
+            <div class="content-block">
+                <p><strong>Last Updated:</strong> November 30, 2025</p>
+                <p>Welcome to <strong>Unblocked Web Games</strong> ("we," "us," or "our"). By accessing or using our website at <a href="https://unblockedwebgames.github.io/" style="color: var(--secondary);">https://unblockedwebgames.github.io/</a>, you agree to comply with and be bound by the following Terms of Service ("Terms"). If you do not agree with these Terms, please do not use our website.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By using this website, you confirm that you are at least 13 years old (or the minimum age of digital consent in your jurisdiction) and agree to these Terms. If you are using this site on behalf of a school, organization, or minor, you represent that you have the authority to bind them to these Terms.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>2. Use of Website</h2>
+                <p>Unblocked Web Games provides free, browser-based HTML5 games for entertainment purposes. You agree to:</p>
+                <ul>
+                    <li>Use the site only for lawful purposes.</li>
+                    <li>Not attempt to bypass any access restrictions.</li>
+                    <li>Not use automated scripts or bots to scrape or interact with the site.</li>
+                    <li>Not redistribute, reverse engineer, or modify any game code.</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2>3. No Warranties</h2>
+                <p>The website and all games are provided “as is” and “as available.” We make no warranties regarding:</p>
+                <ul>
+                    <li>Game availability, accuracy, or performance.</li>
+                    <li>Security, stability, or error-free operation.</li>
+                    <li>Compatibility with your device or network.</li>
+                </ul>
+                <p>Your use of the site is at your own risk.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>4. Third-Party Content</h2>
+                <p>Some games may be developed by third parties. We do not own or control this content and are not responsible for its legality, quality, or safety. If you believe a game infringes your rights, please contact us via the DMCA process (linked in the footer).</p>
+            </div>
+
+            <div class="content-block">
+                <h2>5. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, Unblocked Web Games shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, profits, or goodwill, arising from your use of the site.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>6. Changes to These Terms</h2>
+                <p>We may update these Terms at any time. The “Last Updated” date at the top will reflect changes. Continued use after modifications constitutes acceptance.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>7. Governing Law</h2>
+                <p>These Terms are governed by the laws of the United States. Any disputes will be resolved in accordance with applicable U.S. law.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>8. Contact Us</h2>
+                <p>If you have questions about these Terms, please contact us through our official channels (if available) or review our other policy pages (Privacy Policy, DMCA, etc.) linked in the footer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (identical to your original) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Unblocked Games</h3>
+                    <p>Unblocked Games is the ultimate destination for online gaming enthusiasts. We offer a vast collection of free games across various genres, all accessible directly from your browser with no downloads required.</p>
+                    <p>Our mission is to provide a fun, safe, and engaging gaming experience for players of all ages.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Games</h3>
+                    <ul class="footer-links">
+                        <li><a href="/bitlife"><i class="fas fa-chevron-right"></i> Bitlife</a></li>
+                        <li><a href="/tunnel-rush"><i class="fas fa-chevron-right"></i> Tunnel Rush</a></li>
+                        <li><a href="/eggy-car"><i class="fas fa-chevron-right"></i> Eggy Car</a></li>
+                        <li><a href="/1v1-lol"><i class="fas fa-chevron-right"></i> 1v1 lol</a></li>
+                        <li><a href="/minecraft"><i class="fas fa-chevron-right"></i> Minecraft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="/terms"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="/privacy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>                        
+                        <li><a href="/disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
+                        <li><a href="/dmca"><i class="fas fa-chevron-right"></i> DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Unblocked Games. All rights reserved. Play responsibly.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
