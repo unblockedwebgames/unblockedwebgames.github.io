@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Tunnel Rush Unblocked",
+  "description": "Play Tunnel Rush Unblocked online for free! Experience the ultimate high-speed reflex challenge as you navigate through a twisting, turning tunnel at breakneck speeds. Dodge obstacles, test your reaction time, and push your limits in this addictive endless runner game that will keep you on the edge of your seat.",
+  "url": "https://unblockedwebgames.github.io/tunnelrush",
+  "gamePlatform": [
+    "WebBrowser"
+  ],
+  "genre": [
+    "Arcade",
+    "Action",
+    "Endless Runner"
+  ],
+  "playMode": "SinglePlayer",
+  "datePublished": "2025-11-30",
+  "author": {
+    "@type": "Organization",
+    "name": "Unblocked Web Games",
+    "url": "https://unblockedwebgames.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Unblocked Web Games",
+    "url": "https://unblockedwebgames.github.io"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15680"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://unblockedwebgames.github.io/tunnelrush"
+  },
+  "operatingSystem": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "ChromeOS"
+  ],  
+  "isAccessibleForFree": true,
+  "applicationCategory": "Game"
+}
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games - Tunnel Rush Unblocked</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unblockedwebgames.github.io/" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff2a6d;
+            --secondary: #05d9e8;
+            --dark: #0d0221;
+            --darker: #070115;
+            --light: #f0f0f0;
+            --gray: #2a2a3c;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(13, 2, 33, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff0055;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(5, 217, 232, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Game Player Section */
+        .game-player {
+            margin-top: 90px;
+            padding: 40px 0 30px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .game-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            background: var(--gray);
+        }
+
+        .game-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+
+        .game-info {
+            padding: 25px;
+            background: rgba(13, 2, 33, 0.95);
+            border-top: 2px solid var(--secondary);
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .game-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            color: white;
+        }
+
+        .game-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stars {
+            color: #ffcc00;
+            font-size: 20px;
+        }
+
+        .description {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        .controls h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 10px;
+            color: var(--secondary);
+            font-size: 20px;
+        }
+
+        .controls-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .control-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-key {
+            min-width: 40px;
+            height: 35px;
+            background: var(--darker);
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Games Section */
+        .games-section {
+            padding: 60px 0;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: var(--gray);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .game-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-title-card {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(13, 2, 33, 0.85);
+            backdrop-filter: blur(5px);
+            transform: translateY(100%);
+            transition: var(--transition);
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .game-card:hover .game-title-card {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .game-iframe {
+                height: 500px;
+            }
+            
+            .game-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+            
+            .header-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 16px;
+            }
+            
+            .game-player {
+                margin-top: 80px;
+            }
+            
+            .game-iframe {
+                height: 400px;
+            }
+            
+            .game-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .game-stats {
+                flex-wrap: wrap;
+            }
+            
+            .actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .auth-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .game-iframe {
+                height: 300px;
+            }
+            
+            .game-title {
+                font-size: 22px;
+            }
+            
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .game-card {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>Unblocked Games</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="https://unblockedwebgames.github.io/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/disclaimer">Disclaimer</a></li>                    
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <!-- Game Player Section -->
+    <section class="game-player">
+        <div class="container">
+            <h2 class="section-title">Tunnel Rush Unblocked</h2>
+            <div class="game-container">
+                <!-- Game iframe would go here in a real implementation -->
+                <iframe src="https://www.gameflare.com/embed/tunnel-rush/" class="game-iframe" allowfullscreen></iframe>                
+                <div class="game-info">
+                    <div class="game-header">
+                        <h1 class="game-title">Tunnel Rush Unblocked</h1>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">124,580</span>
+                            <span class="stat-label">Plays</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">18.3K</span>
+                            <span class="stat-label">Likes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">4,215</span>
+                            <span class="stat-label">Comments</span>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-article">
+                        <h3>About Tunnel Rush Unblocked</h3>
+                        <p class="description">
+                            Tunnel Rush is an electrifying, high-speed endless runner game that pushes your reflexes and concentration to their absolute limits. In this adrenaline-pumping experience, you'll navigate through a twisting, turning tunnel filled with vibrant neon obstacles that appear with lightning speed. The game's immersive 3D environment creates an optical illusion that makes you feel like you're traveling at warp speed through a futuristic wormhole. As you progress, the tunnel becomes increasingly complex with tighter turns, faster speeds, and more intricate obstacle patterns that will challenge even the most seasoned players.
+                        </p>
+                        <p class="description">
+                            <strong>Key Features:</strong> Experience heart-pounding speeds that gradually increase as you survive longer, navigate through multiple game modes including endless mode, time trials, and special challenge levels, enjoy stunning visual effects with vibrant neon colors and dynamic lighting that create an immersive tunnel experience, test your reflexes with randomly generated obstacles ensuring no two runs are ever the same, compete for high scores and climb the global leaderboards to prove your skills against players worldwide, and unlock various visual themes and customization options to personalize your gaming experience.
+                        </p>
+                        <p class="description">
+                            The game's simple one-touch controls belie its incredible depth and challenge. With just a click or tap, you'll control your cube as it hurtles through the tunnel, dodging obstacles by moving left and right. But don't be fooled by the straightforward mechanics - Tunnel Rush demands razor-sharp reflexes, impeccable timing, and unwavering focus. The hypnotic electronic soundtrack syncs perfectly with the gameplay, creating a rhythm that enhances the immersive experience. Each successful dodge provides a satisfying rush of accomplishment, while each crash serves as motivation to improve and beat your previous score. Whether you're looking for a quick gaming session or an extended challenge to master, Tunnel Rush delivers an addictive, pulse-pounding experience that will keep you coming back for just one more run.
+                        </p>
+                    </div>
+                    
+                    <div class="controls">
+                        <h3>How to Play Tunnel Rush</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <div class="control-key">A</div>
+                                <span>Move Left</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">D</div>
+                                <span>Move Right</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">←</div>
+                                <span>Left Arrow</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">→</div>
+                                <span>Right Arrow</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">MOUSE</div>
+                                <span>Click to Move</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">SPACE</div>
+                                <span>Pause Game</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <div class="social-share">
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-reddit"></i>
+                            </a>
+                        </div>
+                        <button class="btn btn-primary">Start New Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title">All Games</h2>
+            <div class="games-grid">
+                <!-- Game 1 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Invaders">
+                    <div class="game-title-card">Space Invaders</div>
+                </div>
+                <!-- Game 2 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cyber Runner">
+                    <div class="game-title-card">Cyber Runner</div>
+                </div>
+                <!-- Game 3 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galaxy War">
+                    <div class="game-title-card">Galaxy War</div>
+                </div>
+                <!-- Game 4 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Pixel Dungeon">
+                    <div class="game-title-card">Pixel Dungeon</div>
+                </div>
+                <!-- Game 5 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Racing Fury">
+                    <div class="game-title-card">Racing Fury</div>
+                </div>
+                <!-- Game 6 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Shooter">
+                    <div class="game-title-card">Space Shooter</div>
+                </div>
+                <!-- Game 7 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Alien Defense">
+                    <div class="game-title-card">Alien Defense</div>
+                </div>
+                <!-- Game 8 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Retro Adventure">
+                    <div class="game-title-card">Retro Adventure</div>
+                </div>
+                <!-- Game 9 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Speed Demons">
+                    <div class="game-title-card">Speed Demons</div>
+                </div>
+                <!-- Game 10 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Asteroid Blast">
+                    <div class="game-title-card">Asteroid Blast</div>
+                </div>
+                <!-- Game 11 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galaxy Explorer">
+                    <div class="game-title-card">Galaxy Explorer</div>
+                </div>
+                <!-- Game 12 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Pixel Heroes">
+                    <div class="game-title-card">Pixel Heroes</div>
+                </div>
+                <!-- Game 13 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Turbo Drift">
+                    <div class="game-title-card">Turbo Drift</div>
+                </div>
+                <!-- Game 14 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Odyssey">
+                    <div class="game-title-card">Space Odyssey</div>
+                </div>
+                <!-- Game 15 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Star Command">
+                    <div class="game-title-card">Star Command</div>
+                </div>
+                <!-- Game 16 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="8-Bit Warrior">
+                    <div class="game-title-card">8-Bit Warrior</div>
+                </div>
+                <!-- Game 17 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Nitro Racers">
+                    <div class="game-title-card">Nitro Racers</div>
+                </div>
+                <!-- Game 18 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galactic Shooter">
+                    <div class="game-title-card">Galactic Shooter</div>
+                </div>
+                <!-- Game 19 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cosmic Defense">
+                    <div class="game-title-card">Cosmic Defense</div>
+                </div>
+                <!-- Game 20 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Pixel Legends">
+                    <div class="game-title-card">Pixel Legends</div>
+                </div>
+                <!-- Game 21 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Drift Masters">
+                    <div class="game-title-card">Drift Masters</div>
+                </div>
+                <!-- Game 22 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Commando">
+                    <div class="game-title-card">Space Commando</div>
+                </div>
+                <!-- Game 23 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Alien Invasion">
+                    <div class="game-title-card">Alien Invasion</div>
+                </div>
+                <!-- Game 24 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Retro RPG">
+                    <div class="game-title-card">Retro RPG</div>
+                </div>
+                <!-- Game 25 -->
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Street Racing">
+                    <div class="game-title-card">Street Racing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Unblocked Games</h3>
+                    <p>Unblocked Games is the ultimate destination for online gaming enthusiasts. We offer a vast collection of free games across various genres, all accessible directly from your browser with no downloads required.</p>
+                    <p>Our mission is to provide a fun, safe, and engaging gaming experience for players of all ages.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Games</h3>
+                    <ul class="footer-links">
+                        <li><a href="/bitlife"><i class="fas fa-chevron-right"></i> Bitlife</a></li>
+                        <li><a href="/tunnelrush"><i class="fas fa-chevron-right"></i> Tunnel Rush</a></li>
+                        <li><a href="/eggy-car"><i class="fas fa-chevron-right"></i> Eggy Car</a></li>
+                        <li><a href="/1v1-lol"><i class="fas fa-chevron-right"></i> 1v1 lol</a></li>
+                        <li><a href="/minecraft"><i class="fas fa-chevron-right"></i> Minecraft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="/terms"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="/privacy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>                        
+                        <li><a href="/disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
+                        <li><a href="/dmca"><i class="fas fa-chevron-right"></i> DMCA</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Unblocked Games. All rights reserved. Play responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Game player functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate game stats update
+            const playCount = document.querySelector('.stat-value');
+            let plays = 12450;
+            
+            // Increment play count for demo purpose
+            const interval = setInterval(() => {
+                plays++;
+                playCount.textContent = plays.toLocaleString();
+                
+                // Stop after 30 seconds
+                if (plays > 12500) {
+                    clearInterval(interval);
+                }
+            }, 2000);
+            
+            // Game cards hover effect
+            const gameCards = document.querySelectorAll('.game-card');
+            gameCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Play Again button functionality
+            const playAgainBtn = document.querySelector('.btn-primary');
+            playAgainBtn.addEventListener('click', () => {
+                // In a real implementation, this would reload the game iframe
+                alert('Game restarted! (In a real implementation, this would reload the game)');
+            });
+        });
+    </script>
+</body>
+</html>
