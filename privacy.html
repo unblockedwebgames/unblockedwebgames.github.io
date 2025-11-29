@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Privacy Policy - Unblocked Web Games</title>
+    <meta name="description" content="Privacy Policy for Unblocked Web Games. Learn how we handle your data and protect your privacy while you enjoy our free online games.">
+    <link rel="canonical" href="https://unblockedwebgames.github.io/privacy">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Unblocked Web Games",
+      "url": "https://unblockedwebgames.github.io/",
+      "description": "Free collection of unblocked HTML5 web games playable instantly in any browser. No installation required.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Unblocked Web Games",
+        "url": "https://unblockedwebgames.github.io/"
+      }
+    }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff2a6d;
+            --secondary: #05d9e8;
+            --dark: #0d0221;
+            --darker: #070115;
+            --light: #f0f0f0;
+            --gray: #2a2a3c;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(13, 2, 33, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff0055;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(5, 217, 232, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Privacy Policy Content */
+        .privacy-content {
+            margin-top: 90px;
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(42, 42, 60, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .policy-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .policy-section p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+
+        .policy-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+
+        .highlight {
+            background: rgba(5, 217, 232, 0.1);
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+            
+            .header-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 16px;
+            }
+            
+            .privacy-content {
+                margin-top: 80px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .content-container {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .auth-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .content-container {
+                padding: 20px;
+            }
+            
+            .policy-section h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>Unblocked Games</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/bitlife">Bitlife</a></li>
+                    <li><a href="/tunnelrush">Tunnel Rush</a></li>
+                    <li><a href="/eggy-car">Eggy Car</a></li>
+                    <li><a href="/1v1-lol">1v1 lol</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-content">
+        <div class="container">
+            <h2 class="section-title">Privacy Policy</h2>
+            <div class="content-container">
+                <p class="last-updated">Last Updated: November 30, 2025</p>
+                
+                <div class="policy-section">
+                    <h3>Introduction</h3>
+                    <p>Welcome to Unblocked Web Games ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://unblockedwebgames.github.io/" style="color: var(--secondary);">https://unblockedwebgames.github.io/</a>.</p>
+                    <p>Please read this Privacy Policy carefully. By accessing or using our website, you acknowledge that you have read, understood, and agree to be bound by all the terms outlined in this Privacy Policy.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Information We Collect</h3>
+                    <p>We collect minimal information to provide and improve our services:</p>
+                    <ul>
+                        <li><strong>Automatically Collected Information:</strong> When you visit our website, we may automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device.</li>
+                        <li><strong>Usage Information:</strong> We collect information about how you interact with our website, including the games you play, the pages you visit, and the time spent on each page.</li>
+                        <li><strong>Game Data:</strong> Some games may store data locally on your device (using browser local storage) to save your game progress, high scores, or preferences.</li>
+                    </ul>
+                    <div class="highlight">
+                        <p><strong>Note:</strong> We do not require registration or collect personal information such as your name, email address, or physical address to use our website.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>How We Use Your Information</h3>
+                    <p>We use the information we collect for various purposes:</p>
+                    <ul>
+                        <li>To provide and maintain our website and games</li>
+                        <li>To improve user experience and game performance</li>
+                        <li>To analyze website traffic and usage patterns</li>
+                        <li>To detect, prevent, and address technical issues</li>
+                        <li>To ensure the security and integrity of our website</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Cookies and Tracking Technologies</h3>
+                    <p>We use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
+                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Third-Party Services</h3>
+                    <p>Our website may contain links to third-party websites or services that are not operated by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party sites or services.</p>
+                    <p>Some games on our website may be hosted by third-party providers. When you play these games, you may be subject to the privacy policies of those third parties.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Data Security</h3>
+                    <p>We value your trust in providing us your information, and we strive to use commercially acceptable means of protecting it. However, no method of transmission over the internet or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Children's Privacy</h3>
+                    <p>Our website is intended for users of all ages, including children. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take necessary actions.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Changes to This Privacy Policy</h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us through our website.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Unblocked Games</h3>
+                    <p>Unblocked Games is the ultimate destination for online gaming enthusiasts. We offer a vast collection of free games across various genres, all accessible directly from your browser with no downloads required.</p>
+                    <p>Our mission is to provide a fun, safe, and engaging gaming experience for players of all ages.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Games</h3>
+                    <ul class="footer-links">
+                        <li><a href="/bitlife"><i class="fas fa-chevron-right"></i> Bitlife</a></li>
+                        <li><a href="/tunnel-rush"><i class="fas fa-chevron-right"></i> Tunnel Rush</a></li>
+                        <li><a href="/eggy-car"><i class="fas fa-chevron-right"></i> Eggy Car</a></li>
+                        <li><a href="/1v1-lol"><i class="fas fa-chevron-right"></i> 1v1 lol</a></li>
+                        <li><a href="/minecraft"><i class="fas fa-chevron-right"></i> Minecraft</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="/terms"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="/privacy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>                        
+                        <li><a href="/disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
+                        <li><a href="/dmca"><i class="fas fa-chevron-right"></i> DMCA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Unblocked Games. All rights reserved. Play responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
