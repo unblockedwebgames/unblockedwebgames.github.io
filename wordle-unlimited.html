@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Wordle Unlimited",
+  "alternateName": ["Wordle Free", "Word Guessing Game", "Infinite Wordle"],
+  "description": "Play Wordle Unlimited Unblocked online for free! Enjoy the popular word-guessing challenge without the one-a-day limit. Guess the hidden five-letter word in six attempts. Available directly in your browser with unlimited daily plays.",
+  "url": "https://unblockedwebgames.github.io/wordle-unlimited",
+  "image": "https://unblockedwebgames.github.io/public/wordle-unlimited.png",
+  "thumbnailUrl": "https://unblockedwebgames.github.io/public/wordle-unlimited.png",
+  "gamePlatform": [
+    "WebBrowser",
+    "PC",
+    "Desktop",
+    "Mobile"
+  ],
+  "genre": [
+    "Puzzle",
+    "Word Game",
+    "Educational",
+    "Casual"
+  ],
+  "playMode": "SinglePlayer",
+  "datePublished": "2025-11-30",
+  "dateModified": "2025-12-01",
+  "author": {
+    "@type": "Organization",
+    "name": "Unblocked Web Games",
+    "url": "https://unblockedwebgames.github.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Unblocked Web Games",
+    "url": "https://unblockedwebgames.github.io"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15000000"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://unblockedwebgames.github.io/wordle-unlimited"
+  },
+  "operatingSystem": [
+    "Windows",
+    "macOS",
+    "Linux",
+    "ChromeOS",
+    "iOS",
+    "Android"
+  ],
+  "isAccessibleForFree": true,
+  "applicationCategory": "Game",
+  "softwareRequirements": "Web Browser with JavaScript enabled",
+  "contentRating": "EVERYONE",
+  "interactivityType": "Active",
+  "gameLocation": "Browser-based",
+  "keywords": "wordle unlimited unblocked, wordle game, free wordle, play wordle online, unblocked games, word puzzle"
+}
+</script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games - Wordle Unlimited Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unblockedwebgames.github.io/" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff2a6d;
+            --secondary: #05d9e8;
+            --dark: #0d0221;
+            --darker: #070115;
+            --light: #f0f0f0;
+            --gray: #2a2a3c;
+            --transition: all 0.3s ease;
+
+            /* Wordle specific colors */
+            --wordle-correct: #538d4e;   /* Green */
+            --wordle-present: #b59f3b;   /* Yellow */
+            --wordle-absent: #3a3a3c;    /* Dark Gray */
+            --wordle-key-bg: #818384;    /* Light Gray for keyboard */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(13, 2, 33, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff0055;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(5, 217, 232, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Game Player Section */
+        .game-player {
+            margin-top: 90px;
+            padding: 40px 0 30px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .game-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            background: var(--gray);
+        }
+
+        .game-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+
+        .game-info {
+            padding: 25px;
+            background: rgba(13, 2, 33, 0.95);
+            border-top: 2px solid var(--secondary);
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .game-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            color: white;
+        }
+
+        .game-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stars {
+            color: #ffcc00;
+            font-size: 20px;
+        }
+
+        .description {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        .controls h3 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 10px;
+            color: var(--secondary);
+            font-size: 20px;
+        }
+
+        .controls-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .control-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-key {
+            min-width: 40px;
+            height: 35px;
+            background: var(--darker);
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .game-explanation {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .game-explanation h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .color-key {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .color-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-swatch {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .swatch-correct { background-color: var(--wordle-correct); }
+        .swatch-present { background-color: var(--wordle-present); }
+        .swatch-absent { background-color: var(--wordle-absent); }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Games Section */
+        .games-section {
+            padding: 60px 0;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: var(--gray);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .game-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-title-card {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(13, 2, 33, 0.85);
+            backdrop-filter: blur(5px);
+            transform: translateY(100%);
+            transition: var(--transition);
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .game-card:hover .game-title-card {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .game-iframe {
+                height: 500px;
+            }
+            
+            .game-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+            
+            .header-container {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 16px;
+            }
+            
+            .game-player {
+                margin-top: 80px;
+            }
+            
+            .game-iframe {
+                height: 400px;
+            }
+            
+            .game-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .game-stats {
+                flex-wrap: wrap;
+            }
+            
+            .actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .auth-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .game-iframe {
+                height: 300px;
+            }
+            
+            .game-title {
+                font-size: 22px;
+            }
+            
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .game-card {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>Unblocked Games</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wordle-unlimited">Wordle</a></li>
+                    <li><a href="/2048">2048</a></li>
+                    <li><a href="/snake">Snake</a></li>
+                    <li><a href="/tetris">Tetris</a></li>
+                    <li><a href="/sudoku">Sudoku</a></li>
+                </ul>
+            </nav>            
+        </div>
+    </header>
+
+    <section class="game-player">
+        <div class="container">
+            <h2 class="section-title">Wordle Unlimited</h2>
+            <div class="game-container">
+                <iframe src="https://powerlanguage-wordle.github.io/" class="game-iframe" allowfullscreen></iframe>                
+                <div class="game-info">
+                    <div class="game-header">
+                        <h1 class="game-title">Wordle Unlimited Unblocked Game</h1>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.7/5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">15,000,000</span>
+                            <span class="stat-label">Plays</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">950.4K</span>
+                            <span class="stat-label">Wins</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3.8</span>
+                            <span class="stat-label">Avg. Guesses</span>
+                        </div>
+                    </div>
+                    
+                    <div class="seo-article">
+                        <h3>About Wordle Unlimited Unblocked Game</h3>
+                        <p class="description">
+                            Wordle Unlimited takes the viral word puzzle game and removes the frustrating one-a-day restriction. 
+                            If you love testing your vocabulary and logic, this is the perfect version for endless entertainment. 
+                            The premise is simple: guess a hidden five-letter word in six attempts. After each guess, the tiles 
+                            change color to indicate how close you are to the correct word. This unblocked, continuous version 
+                            allows you to hone your word-guessing skills, strategize, and tackle new puzzles back-to-back 
+                            without waiting for tomorrow.
+                        </p>
+
+                        <h3>How the Color-Coded Feedback System Works</h3>
+                        <p class="description">
+                            The core of Wordle's addictive gameplay lies in its elegant feedback system. Understanding the 
+                            meaning of each color is critical to succeeding in subsequent guesses:
+                        </p>
+                        <div class="game-explanation">
+                            <h4>Color Guide:</h4>
+                            <div class="color-key">
+                                <div class="color-item">
+                                    <div class="color-swatch swatch-correct"></div>
+                                    <span>**GREEN**: Correct letter in the correct spot.</span>
+                                </div>
+                                <div class="color-item">
+                                    <div class="color-swatch swatch-present"></div>
+                                    <span>**YELLOW**: Correct letter, but in the wrong spot.</span>
+                                </div>
+                                <div class="color-item">
+                                    <div class="color-swatch swatch-absent"></div>
+                                    <span>**GRAY**: The letter is not in the word at all.</span>
+                                </div>
+                            </div>
+                            <p style="margin-top: 15px; color: #ccc; font-size: 14px;">Use this information to logically eliminate letters and pinpoint the correct five-letter solution.</p>
+                        </div>
+                        
+                        <h3>The Strategy of Starting Words</h3>
+                        <p class="description">
+                            Many devoted Wordle players rely on strategic opening words to maximize their chances of solving the puzzle quickly. 
+                            The best starting words usually contain common vowels and high-frequency consonants (like R, S, T, L, N, E). 
+                            Words like 'ADIEU' or 'CRANE' are popular choices because they allow you to test up to five unique, high-value 
+                            letters in one go. In Wordle Unlimited, you have the freedom to try out multiple strategies on consecutive puzzles 
+                            to see which one yields the best results.
+                        </p>
+
+                        <h3>Unblocked for Continuous Brain Training</h3>
+                        <p class="description">
+                            As a puzzle game, Wordle Unlimited is an excellent way to keep your mind sharp and expand your vocabulary. 
+                            The unblocked format means you can transition seamlessly from one word to the next, perfect for enjoying 
+                            during short breaks or for extended brain-boosting sessions. Whether you're a casual player or a puzzle 
+                            master, the infinite nature of this game provides endless cognitive exercise and fun.
+                        </p>
+                    </div>
+                    
+                    <div class="controls">
+                        <h3>How to Play Wordle Unlimited (Controls)</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <div class="control-key">A - Z</div>
+                                <span>Type Letters</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">ENTER</div>
+                                <span>Submit Guess</span>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-key">BACKSPACE</div>
+                                <span>Delete Last Letter</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <div class="social-share">
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-btn">
+                                <i class="fab fa-reddit"></i>
+                            </a>
+                        </div>
+                        <button class="btn btn-primary">New Game!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title">All Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Invaders">
+                    <div class="game-title-card">Space Invaders</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cyber Runner">
+                    <div class="game-title-card">Cyber Runner</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galaxy War">
+                    <div class="game-title-card">Galaxy War</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Pixel Dungeon">
+                    <div class="game-title-card">Pixel Dungeon</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Racing Fury">
+                    <div class="game-title-card">Racing Fury</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Shooter">
+                    <div class="game-title-card">Space Shooter</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Alien Defense">
+                    <div class="game-title-card">Alien Defense</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Retro Adventure">
+                    <div class="game-title-card">Retro Adventure</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Speed Demons">
+                    <div class="game-title-card">Speed Demons</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Asteroid Blast">
+                    <div class="game-title-card">Asteroid Blast</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galaxy Explorer">
+                    <div class="game-title-card">Galaxy Explorer</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Pixel Heroes">
+                    <div class="game-title-card">Pixel Heroes</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Turbo Drift">
+                    <div class="game-title-card">Turbo Drift</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Odyssey">
+                    <div class="game-title-card">Space Odyssey</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Star Command">
+                    <div class="game-title-card">Star Command</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="8-Bit Warrior">
+                    <div class="game-title-card">8-Bit Warrior</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Nitro Racers">
+                    <div class="game-title-card">Nitro Racers</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Galactic Shooter">
+                    <div class="game-title-card">Galactic Shooter</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cosmic Defense">
+                    <div class="game-title-card">Cosmic Defense</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Pixel Legends">
+                    <div class="game-title-card">Pixel Legends</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Drift Masters">
+                    <div class="game-title-card">Drift Masters</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Space Commando">
+                    <div class="game-title-card">Space Commando</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Alien Invasion">
+                    <div class="game-title-card">Alien Invasion</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1420&q=80" alt="Retro RPG">
+                    <div class="game-title-card">Retro RPG</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1551817958-d9d98608bdfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Street Racing">
+                    <div class="game-title-card">Street Racing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Unblocked Games</h3>
+                    <p>Unblocked Games is the ultimate destination for online gaming enthusiasts. We offer a vast collection of free games across various genres, all accessible directly from your browser with no downloads required.</p>
+                    <p>Our mission is to provide a fun, safe, and engaging gaming experience for players of all ages.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Games</h3>
+                    <ul class="footer-links">
+                        <li><a href="/wordle-unlimited"><i class="fas fa-chevron-right"></i> Wordle Unlimited</a></li>
+                        <li><a href="/2048"><i class="fas fa-chevron-right"></i> 2048</a></li>
+                        <li><a href="/snake"><i class="fas fa-chevron-right"></i> Snake Game</a></li>
+                        <li><a href="/tetris"><i class="fas fa-chevron-right"></i> Tetris</a></li>
+                        <li><a href="/sudoku"><i class="fas fa-chevron-right"></i> Sudoku</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="/terms"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="/privacy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>                        
+                        <li><a href="/disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
+                        <li><a href="/dmca"><i class="fas fa-chevron-right"></i> DMCA</a></li>
+                        <li><a href="/contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="/about"><i class="fas fa-chevron-right"></i> About us</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Unblocked Games. All rights reserved. Play responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Game player functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate game stats update
+            const playCount = document.querySelector('.stat-value');
+            let plays = 15000000; // Updated base play count
+            
+            // Increment play count for demo purpose
+            const interval = setInterval(() => {
+                plays++;
+                playCount.textContent = plays.toLocaleString();
+                
+                // Stop after 30 seconds
+                if (plays > 15000050) { 
+                    clearInterval(interval);
+                }
+            }, 2000);
+            
+            // Game cards hover effect
+            const gameCards = document.querySelectorAll('.game-card');
+            gameCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Play Again button functionality
+            const playAgainBtn = document.querySelector('.btn-primary');
+            playAgainBtn.addEventListener('click', () => {
+                // In a real implementation, this would reload the game iframe
+                alert('Starting a new Wordle! (In a real implementation, this would reload the game)');
+            });
+        });
+    </script>
+</body>
+</html>
